@@ -1,0 +1,19 @@
+name: GitHub Actions Demo
+
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on: [push]
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Der Workflow wurde gestartet."
+
+      - name: Repository herunterladen
+        uses: actions/checkout@v6
+
+      - name: Dateien anzeigen
+        run: |
+          ls ${{ github.workspace }}
